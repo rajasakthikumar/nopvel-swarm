@@ -8,6 +8,7 @@
         <router-link to="/" class="nav-tab" active-class="active">Dashboard</router-link>
         <router-link to="/pipeline" class="nav-tab" active-class="active">Live Feed</router-link>
         <router-link to="/agents" class="nav-tab" active-class="active">Agents</router-link>
+        <router-link to="/snowflake" class="nav-tab" active-class="active">❄️ Snowflake</router-link>
         <router-link to="/home" class="nav-tab" active-class="active">Workshop</router-link>
       </div>
       <div class="nav-right">

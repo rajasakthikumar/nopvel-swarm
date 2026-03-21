@@ -66,6 +66,7 @@ def create_app():
     from app.api.worldgen import worldgen_bp
     from app.api.pipeline_api import pipeline_bp
     from app.api.enhanced import enhanced_bp
+    from app.api.snowflake_api import snowflake_bp
 
     app.register_blueprint(projects_bp, url_prefix="/api/projects")
     app.register_blueprint(graph_bp, url_prefix="/api/graph")
@@ -74,6 +75,7 @@ def create_app():
     app.register_blueprint(worldgen_bp, url_prefix="/api/worldgen")
     app.register_blueprint(pipeline_bp, url_prefix="/api/pipeline")
     app.register_blueprint(enhanced_bp)
+    app.register_blueprint(snowflake_bp, url_prefix="/api/snowflake")
 
     @app.route("/api/health")
     def health():
