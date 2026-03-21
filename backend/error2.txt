@@ -1,0 +1,8 @@
+11:48:11 [novelswarm] INFO: Neo4j graph builder initialized (lazy connection)
+Traceback (most recent call last):
+  File "c:\Users\RAJASAKTHIKUMAR\Downloads\novel-swarm\novel-swarm\backend\run.py", line 14, in <module>
+    print(f"\U0001f41f NovelSwarm Engine starting on http://localhost:{port}")
+  File "C:\Users\RAJASAKTHIKUMAR\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f41f' in position 0: character maps to <undefined>

@@ -1,0 +1,191 @@
+{
+  "total_issues": 23,
+  "total_corrections": 0,
+  "issues": [
+    {
+      "entity": "Plane of Umbra",
+      "issue": "The Plane of Umbra is described as a realm where shadows coalesced into forms, but the new content introduces the concept of 'Shadow Binding' which implies manipulation and control over shadows by individuals, potentially indicating that there are sentient or at least manipulable entities in the plane.",
+      "severity": "medium",
+      "suggestion": "Clarify whether Shadow Binding is an event that occurred after the creation of the Plane of Umbra or if it's a practice that has always existed alongside the natural formation of shadows.",
+      "layer": "natural_laws",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Plane of Umbra",
+      "issue": "The Plane of Umbra is described as a realm where shadows coalesced into forms, but the Shadow Caverns are presented as underground caves and passages, which could imply that the Plane of Umbra and Shadow Caverns are different locations.",
+      "severity": "medium",
+      "suggestion": "Clarify whether the Shadow Caverns exist within or outside the Plane of Umbra. Ensure that they do not contradict the established cosmology.",
+      "layer": "geography",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Binding",
+      "issue": "The description of Shadow Binding mentions Thaddeus Blackwood and his Shadow Council, but there is no mention of these entities in relation to the Shadow Caverns or any new characters associated with them.",
+      "severity": "medium",
+      "suggestion": "Introduce a connection between the Shadow Binding ritual and the Shadow Caverns. Perhaps Thaddeus Blackwood or his Shadow Council could be involved in managing or exploring the Shadow Caverns.",
+      "layer": "geography",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Weaving and Shadow Binding",
+      "issue": "Both abilities involve manipulating shadows from the Plane of Umbra, which could imply they are essentially the same or closely related, but their descriptions suggest different mechanisms.",
+      "severity": "medium",
+      "suggestion": "Clarify that while both abilities use shadows, 'Shadow Weaving' is a more intricate and perhaps voluntary process compared to the coercive nature of 'Shadow Binding'.",
+      "layer": "magic_system",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Caverns and Shadow Mastery",
+      "issue": "The existence of the Shadow Caverns is mentioned as a separate geographic feature, but the newly generated 'Shadow Mastery' description does not reference them directly, which might imply they are no longer needed or exist.",
+      "severity": "medium",
+      "suggestion": "Ensure that the Shadow Caverns are still relevant by explicitly stating their importance in the Shadow Mastery training process.",
+      "layer": "power_system",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Mastery",
+      "issue": "Aldor possess an innate ability to master shadows, which contradicts the previously established ranks and training methods for Shadow Mastery.",
+      "severity": "high",
+      "suggestion": "Introduce Aldor as a subgroup within the existing Shadow Mastery system or modify their innate abilities to something related but not directly conflicting with current established rules.",
+      "layer": "races",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Caverns",
+      "issue": "The new entry for the Whisperer Serpent mentions 'Whispering Grounds' as a habitat, which is not mentioned in the previously established data about Shadow Caverns. This suggests a contradiction or additional location that was not accounted for.",
+      "severity": "medium",
+      "suggestion": "Verify if Whispering Grounds are another name for Shadow Caverns or if they represent an entirely new location. If they are separate, update the geography data accordingly.",
+      "layer": "creatures",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Eclipse Blossom",
+      "issue": "The new flora 'Eclipse Blossom' is described as absorbing shadow energy and releasing light, which contradicts the established natural laws of Shadow Binding where binding souls using dark rituals results in living shadows. Additionally, it introduces a source of light within the Plane of Umbra, an inherently dark realm.",
+      "severity": "high",
+      "suggestion": "Reconsider the magical properties of the Eclipse Blossom to ensure they align with the established shadow and darkness themes.",
+      "layer": "flora",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Eclipse Wraith and Shadow Caverns",
+      "issue": "The Eclipse Wraith is described as a manifestation of unfulfilled darkness, born from the manipulation of Eclipse Crystal. However, it does not have any clear connection to the Shadow Caverns, which are already established as a specific type of geography with certain resources.",
+      "severity": "medium",
+      "suggestion": "Integrate the Eclipse Wraith into the existing geography of the Shadow Caverns or clarify its connection to them.",
+      "layer": "spirits_ghosts",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Binding and Eclipse Cult",
+      "issue": "Both the 'Shadow Binding' ritual and the 'Eclipse Cult' worship power through shadow manipulation, which could be seen as redundant or contradictory in terms of distinct paths to power.",
+      "severity": "medium",
+      "suggestion": "Clarify that while both involve shadow manipulation, they serve different purposes. For example, Shadow Binding is a specific ritual for binding souls, whereas the Eclipse Cult teaches broader usage and control over shadows.",
+      "layer": "religions",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Eclipse Wraith and Eclipse Cult",
+      "issue": "The 'Eclipse Wraith' is described as a spirit manifestation of unfulfilled darkness, yet there's no mention of how this aligns with or relates to the power path taught by the 'Eclipse Cult'. This could imply that the cult does not deal directly with wraiths.",
+      "severity": "low",
+      "suggestion": "Add a note in the Eclipse Cult description mentioning their relationship with spirits, specifically stating if they interact with or control wraiths.",
+      "layer": "religions",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Ironclaw Village",
+      "issue": "Social classes in Ironclaw Village are the same as ranks in Shadow Mastery, but 'Apprentice', 'Initiate', and 'Mentor' have different meanings.",
+      "severity": "high",
+      "suggestion": "Clarify that while the terms are similar, they represent different concepts within the village governance and the magic system.",
+      "layer": "societies",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Eclipse Wraith",
+      "issue": "The Eclipse Wraith is described as a manifestation of unfulfilled darkness, yet the newly generated Eclipse Blossom Cult seems to focus on cultivating plants for enhanced abilities rather than directly involving darkness or shadows.",
+      "severity": "high",
+      "suggestion": "Ensure that the activities and purposes of the Eclipse Blossom Cult align with the overall theme of darkness and shadows. Consider how their cultivation might relate to or influence the existence of the Eclipse Wraith.",
+      "layer": "factions",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Ironclaw Village",
+      "issue": "The same entity is described with different attributes in the new layer and previously established data.",
+      "severity": "high",
+      "suggestion": "Review and reconcile the descriptions of Ironclaw Village to ensure consistency.",
+      "layer": "nations",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Menhirian Hills",
+      "issue": "The presence of the Menhirian Hills introduces new entities (Eclipse Crystals, Rare Shadows) that have not been previously established in the world.",
+      "severity": "high",
+      "suggestion": "Integrate these new entities into existing lore. For example, describe the origin and use of Eclipse Crystals and Rare Shadows within the Plane of Umbra or other established elements.",
+      "layer": "economies",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Menhirian Hills",
+      "issue": "The major exports include 'Whisperer Serpent Venom', but there is no established information on this creature in the previous data.",
+      "severity": "high",
+      "suggestion": "Introduce Whisperer Serpents into existing lore or remove 'Venom' from the list of exports until such a creature can be properly integrated.",
+      "layer": "economies",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Menhirian Hills and Shadow Mastery",
+      "issue": "The new economy focuses on 'Rare Shadows', which could imply that shadows are a tradeable commodity. However, previously described in 'Shadow Weaving' as a source of power with hard limitations, this could create confusion.",
+      "severity": "medium",
+      "suggestion": "Clarify whether Rare Shadows and normal shadows are the same or different entities. If they are the same, ensure that trading them does not violate any established limitations on shadow manipulation.",
+      "layer": "economies",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Ironclaw Village",
+      "issue": "Inconsistency in social class descriptions between the CULTURES and SOCIETIES layers.",
+      "severity": "medium",
+      "suggestion": "Ensure consistency by aligning the social classes described in both entries.",
+      "layer": "technologies",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Shadow Mastery",
+      "issue": "The 'Ironclaw Village' is associated with the Aldor, but the new entry for 'Shadowforge' lists it as an ancient forge built by the Aldor, which could imply that the village predates their existence or was founded after a significant gap. This might create confusion about the timeline.",
+      "severity": "medium",
+      "suggestion": "Clarify whether Ironclaw Village existed before, during, or after the construction of Shadowforge to ensure consistency.",
+      "layer": "wonders",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Ironclaw Village",
+      "issue": "The name 'Ironclaw Village' is used for both the village's name and as a social class in the Aldor society, which is contradictory.",
+      "severity": "high",
+      "suggestion": "Rename one of these references to avoid confusion.",
+      "layer": "artifacts",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Ironclaw Village",
+      "issue": "The Ironclaw Village is mentioned in both the Cultures layer and the Societies layer, but there are inconsistencies in how its governance type and social classes are described.",
+      "severity": "high",
+      "suggestion": "Ensure consistency by either aligning the governance types or the social class descriptions in both layers.",
+      "layer": "history",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Thaddeus Blackwood",
+      "issue": "Thaddeus Blackwood is introduced as a leader during the Era of Shadows and Light, but he was previously established as part of the Shadow Binding ritual.",
+      "severity": "high",
+      "suggestion": "Clarify Thaddeus Blackwood's role or establish a timeline where these events align.",
+      "layer": "history",
+      "type": "contradiction"
+    },
+    {
+      "entity": "Societies.Ironclaw Village",
+      "issue": "Social classes in Ironclaw Village do not match the ranks of Shadow Mastery.",
+      "severity": "high",
+      "suggestion": "Align the social classes with the ranks of Shadow Mastery.",
+      "layer": "themes",
+      "type": "contradiction"
+    }
+  ],
+  "corrections": []
+}

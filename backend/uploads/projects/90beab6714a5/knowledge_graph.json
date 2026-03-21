@@ -1,0 +1,221 @@
+{
+  "entities": [
+    {
+      "id": "181ddc30",
+      "name": "Shadowsphere",
+      "type": "concept",
+      "description": "creation_myth: In the beginning, before the world was shaped by light and darkness, there existed a realm known as the Shadowsphere. It was said that this plane of existence was born from the void between the realms of Lumina (light) and Nocturna (darkness). The Shadowsphere is a place where shadows exist in their purest form, neither bound by the rules of light nor darkness but capable of bending both to their will. | planes_of_existence: ['Lumina', 'Nocturna', 'Shadowsphere'] | fundamental_for",
+      "properties": {
+        "world_layer": "cosmology"
+      }
+    },
+    {
+      "id": "acb5990b",
+      "name": "Veil Conduits",
+      "type": "concept",
+      "description": "description: Individuals who can manipulate the very fabric of deception, creating illusions and mirages that can deceive even the keenest eye. | how_it_differs_from_reality: In our world, manipulation is more overt. In New Haven, Veil Conduits use subtle shadows to shape perceptions and narratives, making them formidable in political intrigue. | narrative_consequences: Lyra must learn to detect the whispers of Veil Conduits as she navigates the complex web of politics and deceit. This knowledge",
+      "properties": {
+        "world_layer": "natural_laws"
+      }
+    },
+    {
+      "id": "0577ada0",
+      "name": "Windpeak Mountains",
+      "type": "place",
+      "description": "type: mountain range | climate: temperate with heavy rainfall in the higher altitudes | terrain: steep cliffs, dense forests, hidden paths | resources: mythical symbols, potential shadow pathways",
+      "properties": {
+        "world_layer": "geography"
+      }
+    },
+    {
+      "id": "7b19062c",
+      "name": "Windweaving",
+      "type": "magic_system",
+      "description": "source_of_power: Transcendental Energy from the Windpeaks | cost_or_price: Energy depletion over extended use; potential physical and mental exhaustion | hard_limitations: Limited to those who have spent significant time in the Windpeak Mountains, as they must attune themselves to the mountain's energy. Excessive use can cause disorientation and loss of connection. | types_or_schools: ['Aeromancy', 'Pneumatology']",
+      "properties": {
+        "world_layer": "magic_system"
+      }
+    },
+    {
+      "id": "a8a9142d",
+      "name": "Shadowweaving",
+      "type": "magic_system",
+      "description": "ranks_or_stages: ['Apprentice', 'Initiate', 'Master', 'Mystic'] | training_method: [{'stage': 'Apprentice', 'description': 'Training begins with basic shadow manipulation techniques, focusing on control and sensory awareness.'}, {'stage': 'Initiate', 'description': 'Initiates learn to weave simple illusions and interact with their shadows more deeply. They must pass a series of tests that involve both physical challenges and mental exercises.'}, {'stage': 'Master', 'description': 'Masters can cr",
+      "properties": {
+        "world_layer": "power_system"
+      }
+    },
+    {
+      "id": "bb621cdd",
+      "name": "Nyx",
+      "type": "character",
+      "description": "domain: Shadows and Deception | personality: Mysterious and manipulative, Nyx thrives on secrets and hidden truths. She is a master of shadows, both in the literal sense and as a metaphor for manipulation. | relationship_to_mortals: Nyx watches over her followers with an unseen eye, often manipulating events to suit her purposes without being directly involved. Mortals who seek her blessings must betray something more valuable than life itself. | blessings_granted: ['Ability to manipulate shadow",
+      "properties": {
+        "world_layer": "divine_system"
+      }
+    },
+    {
+      "id": "83c2b090",
+      "name": "Shadowfolk",
+      "type": "creature",
+      "description": "physical_traits: {'skin_color': 'pale with a faint luminescence in low light', 'eyes': 'deep black or silver with an eerie glow', 'hair': 'silvery-gray or white, long and flowing'} | lifespan: extremely long, comparable to the lifespan of trees | innate_abilities: {'shadowweaving': 'can manipulate shadows for invisibility, illusion creation, and spellcasting', 'time perception': 'enhanced awareness of time cycles and patterns'} | cultural_tendencies: {'independence': 'value their autonomy and pr",
+      "properties": {
+        "world_layer": "races"
+      }
+    },
+    {
+      "id": "b6757d29",
+      "name": "Shadow Whisp",
+      "type": "creature",
+      "description": "type: spirit | habitat: Windpeak Mountains, Shadowsphere | danger_level_1to10: 3 | abilities: ['Illusion creation', 'Stealthy movement', 'Whispering manipulation']",
+      "properties": {
+        "world_layer": "creatures"
+      }
+    },
+    {
+      "id": "ef2ee942",
+      "name": "Whisperbloom",
+      "type": "creature",
+      "description": "type: flower | magical_properties: ['enhanced communication with shadows', 'illusion creation', 'memory retrieval'] | habitat: Windpeak Mountains, groves hidden in dense forests | rarity: rare",
+      "properties": {
+        "world_layer": "flora"
+      }
+    },
+    {
+      "id": "f0075599",
+      "name": "Echoes of Valor",
+      "type": "creature",
+      "description": "type: spirit | origin_of_the_spirit: Nyx's domain in the Windpeak Mountains | behavior_pattern: Haunts abandoned mines, offers guidance to protect the Greywind clan | power_level: 5",
+      "properties": {
+        "world_layer": "spirits_ghosts"
+      }
+    },
+    {
+      "id": "87e37745",
+      "name": "Shadowbrotherhood",
+      "type": "culture",
+      "description": "deity_or_philosophy_worshipped: Nyx (Goddess of Shadows and Deception) | core_doctrine: The Shadowbrothers believe in the power of shadows to manipulate reality, viewing Nyx as the ultimate arbiter of fate. They argue that by embracing darkness, one can uncover hidden truths and gain control over the world. | rituals_and_practices: ['Full Moon Gatherings: Celebrate under the full moon, performing shadowservices to honor Nyx and seek her guidance.', 'Whispered Blessings: Use illusions and shadows",
+      "properties": {
+        "world_layer": "religions"
+      }
+    },
+    {
+      "id": "2e03e218",
+      "name": "New Haven",
+      "type": "culture",
+      "description": "governance_type: Oligarchy with Shadow Wielders | social_classes: ['Conduit Nobility', 'Shadow Manipulators', 'Commoners'] | how_class_is_determined: Class is determined by one's ability to manipulate shadows and Veil Conduits, leading to a rigid social hierarchy. | justice_system: The justice system relies heavily on the influence of Shadow Wielders. Commoners often face harsh punishments for minor infractions, while those connected to powerful nobles are treated more leniently.",
+      "properties": {
+        "world_layer": "societies"
+      }
+    },
+    {
+      "id": "914154ae",
+      "name": "Nyxbreen",
+      "type": "culture",
+      "description": "spoken_by: ['Shadowfolk', \"Nyx's followers\"] | script_type: Cuneiform symbols etched into stone or wood | sample_words_and_meanings: {'Lyrathor': 'Protector of the Veil', 'Vellis': 'Whisperer of Shadows', 'Zylar': 'Guardian of the Night', 'Thalnir': 'Echoes of Valor'} | naming_conventions_for_people: {'prefix': ['Lyr-', 'Vell-', 'Thal-'], 'suffix': '-thor', '-nis': '-is'}",
+      "properties": {
+        "world_layer": "languages"
+      }
+    },
+    {
+      "id": "3c00c8e2",
+      "name": "Nyx's Whisper",
+      "type": "faction",
+      "description": "purpose: To manipulate high-ranking officials and nobles through shadow magic, using deceit and misinformation to maintain control over New Haven. | leader: Ariel Blackwood (Lyra\u2019s mother) | membership_requirements: ['Skill in shadow manipulation', 'Loyalty to Nyx'] | resources_and_power: Access to Veil Conduits for creating illusions and mirages, wealth from their influence over nobles",
+      "properties": {
+        "world_layer": "factions"
+      }
+    },
+    {
+      "id": "08b009f5",
+      "name": "Luminara",
+      "type": "faction",
+      "description": "government_type: Feudal Oligarchy with Shadow Wielders | ruler: High Priestess Mara | capital_city: Shadowspire | territory_description: A land of dense forests and towering stone ruins, Luminara is ruled by the High Priestess Mara and her Shadow Wielders. The city is built into the craggy cliffs of the Windpeak Mountains, with hidden pathways and shadowy markets.",
+      "properties": {
+        "world_layer": "nations"
+      }
+    },
+    {
+      "id": "d4758167",
+      "name": "Silver Vein Pass Trade Route",
+      "type": "concept",
+      "description": "primary_currency: Veil Gems | major_exports: ['Shadow Whispers', 'Whisperbloom'] | major_imports: ['Windweaving Tools', 'Veil Conduits'] | wealth_distribution: {'High Priestess Mara (Luminara)': 'Controls much of the trade, using Veil Conduits to spread misinformation.', \"Nyx's Whisper (Shadowbrotherhood)\": 'Manipulates high-ranking officials and nobles through shadow magic.', 'Commoners': 'Face harsh punishments for minor offenses, often unable to afford goods from the pass.'}",
+      "properties": {
+        "world_layer": "economies"
+      }
+    },
+    {
+      "id": "dd1ba739",
+      "name": "Windweaving Devices",
+      "type": "concept",
+      "description": "description: Devices that allow users to manipulate natural elements such as wind and water to create protective barriers or misdirect potential threats. | who_invented_it: Eiric Thorsmorn, a skilled tracker and naturalist from the Windpeak Mountains. | who_controls_it: Local communities and agricultural councils with access to skilled practitioners who have mastered the techniques of Windweaving. | military_applications: Use wind devices to create defensive barriers or misdirect enemy movements",
+      "properties": {
+        "world_layer": "technologies"
+      }
+    },
+    {
+      "id": "73f06f5f",
+      "name": "Veilforge",
+      "type": "place",
+      "description": "type: ancient structure | builder: Unknown ancient civilization | age: Over 2000 years | original_purpose: House of knowledge about shadow manipulation, possibly a school or research facility",
+      "properties": {
+        "world_layer": "wonders"
+      }
+    },
+    {
+      "id": "fc0f0602",
+      "name": "Whispering Veil",
+      "type": "artifact",
+      "description": "type: cloak | creator: Unknown ancient civilization | power_description: This cloak can make its wearer nearly invisible, create simple illusions to mislead others, and manipulate perceptions. It is said to be imbued with Nyx's essence. | cost_of_use: Energy depletion; potential physical and mental exhaustion over extended use",
+      "properties": {
+        "world_layer": "artifacts"
+      }
+    },
+    {
+      "id": "8854cba0",
+      "name": "Age of Shadows",
+      "type": "event",
+      "description": "era_name: Age of Shadows | approximate_duration: 100 years (5256 BC - 4256 BC) | defining_events: ['Discovery of Windweaving and Shadowweaving techniques in the Windpeak Mountains, leading to a new era of dualistic magic.', \"Formation of the Shadowbrotherhood, dedicated to Nyx's worship and manipulation of shadows.\"] | major_figures: ['Eiric Thorsmorn - A skilled tracker and naturalist who first uncovered the true nature of Windweaving and Shadowweaving.', \"Ariel Blackwood (Lyra\u2019s mother) - Lead",
+      "properties": {
+        "world_layer": "history"
+      }
+    },
+    {
+      "id": "afa0b668",
+      "name": "Veil of Deception",
+      "type": "event",
+      "description": "source_or_prophet: Eldarion Tharn | prophecy_text: In the heart of the Windpeak, where shadows dance and whispers linger, betrayal lies close at hand. | common_interpretation: A trusted advisor to the king will betray their position, leading to internal strife within the court. | hidden_true_meaning: Lyra Blackwood\u2019s journey is interconnected with a shadowed figure from her own clan who turns against her, testing the trust of the Greywind clan as a whole.",
+      "properties": {
+        "world_layer": "prophecies"
+      }
+    },
+    {
+      "id": "3a3ead61",
+      "name": "Echoes of Valor Monitoring",
+      "type": "event",
+      "description": "type: ideological clash | parties_involved: ['Echoes of Valor', \"Nyx's Whisper\"] | root_cause: The Echoes of Valor notice unusual disturbances in the Windpeak Mountains, suspecting Lyra and her shadows. | current_state: The Echoes are monitoring the situation closely, waiting to see if their suspicions are confirmed or dispelled.",
+      "properties": {
+        "world_layer": "conflicts"
+      }
+    },
+    {
+      "id": "cbd48db9",
+      "name": "Power and its Cost",
+      "type": "concept",
+      "description": "theme: Power and its Cost | how_expressed_in_world: Through the manipulation of shadows in New Haven, where Veil Conduits use subtle magic to shape perceptions and narratives, and the Echoes of Valor monitoring Lyra\u2019s journey. | which_characters_embody_it: ['Lyra Blackwood (Protagonist)', 'Mara (The City\u2019s Most Powerful Shadow Wielder)', \"Ariel Blackwood (Nyx's Whisper Leader)\"] | which_conflicts_explore_it: ['Echoes of Valor Monitoring', \"Echoes of Valor vs. Nyx's Whisper\"]",
+      "properties": {
+        "world_layer": "themes"
+      }
+    },
+    {
+      "id": "54c204af",
+      "name": "Unveiling Shadows",
+      "type": "event",
+      "description": "arc_name: Unveiling Shadows | type: main_arc | act_structure: ['Discovery of Hidden Cycle', 'Mapping the Borders', 'Trial of Shadows'] | chapter_count_estimate: 24",
+      "properties": {
+        "world_layer": "story_arcs"
+      }
+    }
+  ],
+  "relationships": []
+}

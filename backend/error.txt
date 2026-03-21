@@ -1,0 +1,13 @@
+11:47:02 [novelswarm] INFO: Neo4j graph builder initialized (lazy connection)
+Traceback (most recent call last):
+  File "c:\Users\RAJASAKTHIKUMAR\Downloads\novel-swarm\novel-swarm\backend\run.py", line 9, in <module>
+    app = create_app()
+          ^^^^^^^^^^^^
+  File "c:\Users\RAJASAKTHIKUMAR\Downloads\novel-swarm\novel-swarm\backend\app\__init__.py", line 63, in create_app
+    from app.api.simulation import simulation_bp
+  File "c:\Users\RAJASAKTHIKUMAR\Downloads\novel-swarm\novel-swarm\backend\app\api\simulation.py", line 16, in <module>
+    from app.services.simulation_engine import SimulationEngine
+  File "c:\Users\RAJASAKTHIKUMAR\Downloads\novel-swarm\novel-swarm\backend\app\services\simulation_engine.py", line 372
+    else f"MODE: OUTLINE.\n{'Outline:\\n'+outline[:500] if outline else 'No outline yet.'}")
+                                                                                           ^
+SyntaxError: f-string expression part cannot include a backslash

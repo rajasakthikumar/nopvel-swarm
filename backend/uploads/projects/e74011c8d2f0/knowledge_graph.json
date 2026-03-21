@@ -1,0 +1,176 @@
+{
+  "entities": [
+    {
+      "id": "8b6d4f71",
+      "name": "cosmology_unnamed",
+      "type": "concept",
+      "description": "cosmology: [{'name': 'The Realm of Umbral Whispers', 'creation_myth': 'In the beginning, there was a cosmic void called Nyxara, where light and darkness were entangled in an eternal dance. From this void emerged Umbra, the shadow realm, birthed by the primordial goddess Nysa who wept tears of sorrow and longing into its depths.', 'planes_of_existence': ['Umbra - the plane of shadows', 'Illumina - the plane of light'], 'fundamental_forces': [\"Nysa's Embrace - gravity-like force connecting living ",
+      "properties": {
+        "world_layer": "cosmology"
+      }
+    },
+    {
+      "id": "1f74aa52",
+      "name": "The Law of Shadow Detachment",
+      "type": "concept",
+      "description": "description: In Umbra, shadows are sentient entities that can detach and live independently from their human hosts after dusk. | how_it_differs_from_reality: Unlike in reality where shadows are merely dark areas devoid of light, the Nymphae are living creatures capable of emotions and sentience. | narrative_consequences: This law creates a central conflict for Elara as her father's abandoned shadow returns seeking understanding and retribution years later. | who_exploits_it: Elara Silvertongue u",
+      "properties": {
+        "world_layer": "natural_laws"
+      }
+    },
+    {
+      "id": "16f03b71",
+      "name": "Umbra",
+      "type": "place",
+      "description": "type: City | climate: Perpetually Overcast with Occasional Light Rain and Dense Fog | terrain: Labyrinthine Streets, High-Rise Buildings, Narrow Alleys, Bridges Spanning Canals | resources: Shadow Manipulation Abilities, Lantern Oil for Lighting",
+      "properties": {
+        "world_layer": "geography"
+      }
+    },
+    {
+      "id": "c405ed26",
+      "name": "Shadecraft",
+      "type": "magic_system",
+      "description": "source_of_power: The Realm of Umbral Whispers | cost_or_price: Emotional and physical toll; requires concentration and focus, often leading to exhaustion. | hard_limitations: ['Cannot be used during daylight hours without causing severe disorientation.', \"Excessive use can lead to permanent detachment from one's own shadow (Nymphae), resulting in a loss of identity and sanity.\"] | types_or_schools: ['Shadow Manipulation', 'Illusion Casting', 'Telepathy with Nymphae']",
+      "properties": {
+        "world_layer": "magic_system"
+      }
+    },
+    {
+      "id": "0ecae3eb",
+      "name": "Shadecraft Mastery Path",
+      "type": "magic_system",
+      "description": "ranks_or_stages: ['Neophyte', 'Adept', 'Master', 'Grandmaster'] | training_method: {'initial_training': 'Learning to sense and manipulate detached shadows (Nymphae) under the guidance of Thane, Elara begins with basic shadow manipulation exercises.', 'advanced_training': 'Advanced students delve into deeper emotional connections with Nymphae, engaging in complex illusions and telepathic communication.'} | breakthrough_conditions: {'neophyte_to_adept': 'Successfully completing an investigation th",
+      "properties": {
+        "world_layer": "power_system"
+      }
+    },
+    {
+      "id": "4c744f7f",
+      "name": "Umbrans",
+      "type": "creature",
+      "description": "physical_traits: Umbrans are tall and slender with pale skin that seems to absorb light rather than reflect it. Their hair is usually black or dark grey, often styled in intricate braids or dreadlocks. They have large, expressive eyes that can shift color from deep violet to midnight blue. | lifespan: 150 years | innate_abilities: ['Shadow Manipulation', 'Enhanced Night Vision'] | cultural_tendencies: Umbrans believe in accepting duality and embracing both light and darkness. They are skilled ne",
+      "properties": {
+        "world_layer": "races"
+      }
+    },
+    {
+      "id": "71be3515",
+      "name": "Spectral Hound of Nyxara",
+      "type": "creature",
+      "description": "type: animal | habitat: The Realm of Umbral Whispers, Umbra's graveyards and abandoned alleys | danger_level_1to10: 7 | abilities: ['Shadow Walking', 'Telepathic Communication with Nymphae', 'Enhanced Night Vision']",
+      "properties": {
+        "world_layer": "creatures"
+      }
+    },
+    {
+      "id": "318b9b12",
+      "name": "Lumina Vines",
+      "type": "creature",
+      "description": "type: Plant | magical_properties: Absorbs and transmits moonlight, can be used to strengthen connections with Nymphae. | habitat: Umbra's moonlit alleys, especially near the bridges spanning canals. | rarity: Common but specific locations required for growth.",
+      "properties": {
+        "world_layer": "flora"
+      }
+    },
+    {
+      "id": "362ac1e6",
+      "name": "The Coven of Nyxara",
+      "type": "culture",
+      "description": "deity_or_philosophy_worshipped: Nyxara, the Void Mother | core_doctrine: Belief in Nyxara as the creator and ruler of the Realm of Umbral Whispers. Embraces darkness as a sacred force, viewing shadows as manifestations of divine will. | rituals_and_practices: Monthly full moon gatherings where Nymphae are honored and offerings made to Nyxara. Participants engage in shadow dances and recite hymns praising the void's power. | clergy_hierarchy: ['High Priestess', 'Priestess of Shadows', 'Shadow See",
+      "properties": {
+        "world_layer": "religions"
+      }
+    },
+    {
+      "id": "5e1d373a",
+      "name": "The Shadow Council of Umbra",
+      "type": "culture",
+      "description": "governance_type: Oligarchy | social_classes: ['Councilors', 'Shadow Benders', 'Commoners'] | how_class_is_determined: Council membership is by invitation or election after proving mastery in Shadecraft. Commoners are those without the ability to manipulate shadows. | justice_system: {'courts': 'The Umbral Courts adjudicate crimes involving Nymphae and shadow manipulation; presided over by High Priestesses of Nyxara.', 'punishments': ['Soul Binding', 'Shadow Banishment']}",
+      "properties": {
+        "world_layer": "societies"
+      }
+    },
+    {
+      "id": "c39f2243",
+      "name": "Umbran Tongue",
+      "type": "culture",
+      "description": "spoken_by: Umbrans | script_type: Silhouette Script - characters are rendered in shadowy outlines, making texts appear to be a part of the darkness itself. | sample_words_and_meanings: {'Nyxara': 'The Void Mother, creator and ruler of Umbral Whispers', 'Shadecraft': 'Art of manipulating shadows for magic', 'Lumina': 'Moonlight, symbolizing hope in darkness', 'Thane': 'Respected mentor or guide'} | naming_conventions_for_people: {'First_Name_Last_Symbol': \"Names usually contain a first name follo",
+      "properties": {
+        "world_layer": "languages"
+      }
+    },
+    {
+      "id": "9f19b8d6",
+      "name": "The Veiled Order",
+      "type": "faction",
+      "description": "purpose: To study and manipulate shadows to uncover hidden truths about Umbra's past. | leader: Matriarch Elara Silvertongue | membership_requirements: Proven mastery in Shadecraft up to Adept level, willingness to delve into the darkest secrets of Umbral Whispers. | resources_and_power: ['Access to ancient texts from The Coven of Nyxara', 'Control over certain Lumina Vine locations']",
+      "properties": {
+        "world_layer": "factions"
+      }
+    },
+    {
+      "id": "ed9eccd8",
+      "name": "Umbra",
+      "type": "faction",
+      "description": "government_type: Oligarchy | ruler: Shadow Council of Umbra | capital_city: Vestibulum Nocturnum | territory_description: A sprawling metropolis with labyrinthine streets, high-rise buildings, narrow alleys, and bridges spanning canals. The city is perpetually overcast with occasional light rain and dense fog.",
+      "properties": {
+        "world_layer": "nations"
+      }
+    },
+    {
+      "id": "f4c7ce38",
+      "name": "Economy of Umbra",
+      "type": "concept",
+      "description": "primary_currency: Shadow Coins | major_exports: ['Lumina Vine Resin', 'Ancient Shadow Texts'] | major_imports: ['Moonlight Crystals', 'Silhouette Scripts'] | wealth_distribution: {'Councilors': 40, 'Shadow Benders': 35, 'Commoners': 25}",
+      "properties": {
+        "world_layer": "economies"
+      }
+    },
+    {
+      "id": "49f961f3",
+      "name": "The Veil of Nyxara",
+      "type": "artifact",
+      "description": "type: Relic | creator: Nyxara, the Void Mother | power_description: Enables users to temporarily access The Realm of Umbral Whispers and communicate directly with Nymphae, revealing hidden truths about Umbra\u2019s past. | cost_of_use: Causes severe disorientation during daylight hours; prolonged use can lead to permanent detachment from one's own shadow (Nymphae).",
+      "properties": {
+        "world_layer": "artifacts"
+      }
+    },
+    {
+      "id": "fcf4e743",
+      "name": "The Epoch of Nyxara's Awakening",
+      "type": "event",
+      "description": "era_name: The Epoch of Nyxara's Awakening | approximate_duration: 500 years | defining_events: ['The Birth of Shadecraft', 'Creation of The Veil of Nyxara'] | major_figures: ['Nyxara, the Void Mother', 'Ancestor Silvertongue']",
+      "properties": {
+        "world_layer": "history"
+      }
+    },
+    {
+      "id": "091698b4",
+      "name": "The Veiled Truth",
+      "type": "event",
+      "description": "source_or_prophet: Oracle of Nyxara | prophecy_text: In the city where shadows speak, a child left behind shall find her father's shade. Yet, not all will see this as reunification. | common_interpretation: Elara will reconcile with her estranged father through his Nymphae. | hidden_true_meaning: Elara must confront and accept the imperfections of her past to heal emotionally.",
+      "properties": {
+        "world_layer": "prophecies"
+      }
+    },
+    {
+      "id": "353c08c8",
+      "name": "Love and Acceptance",
+      "type": "concept",
+      "description": "theme: Love and Acceptance | how_expressed_in_world: The Law of Shadow Detachment allows Nymphae to seek connection with their hosts, symbolizing the need for acceptance in relationships. | which_characters_embody_it: ['Elara Silvertongue', 'Thane'] | which_conflicts_explore_it: [\"Conflict between Elara and her father's Nymphae\", \"Elara's struggle to reconcile with her past\"]",
+      "properties": {
+        "world_layer": "themes"
+      }
+    },
+    {
+      "id": "bdce08cf",
+      "name": "The Veiled Truth Unveiled",
+      "type": "event",
+      "description": "arc_name: The Veiled Truth Unveiled | type: Main | act_structure: [{'name': 'Discovery', 'description': \"Elara learns about her father's abandonment, leading to the return of his Nymphae.\"}, {'name': 'Conflict', 'description': 'Elara battles with her emotions and decides to confront her past through Shadecraft.'}, {'name': 'Climax', 'description': \"Elara faces her father's Nymphae in a confrontation that reveals painful truths about their relationship.\"}] | chapter_count_estimate: 10",
+      "properties": {
+        "world_layer": "story_arcs"
+      }
+    }
+  ],
+  "relationships": []
+}

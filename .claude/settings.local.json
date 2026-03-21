@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/RAJASAKTHIKUMAR/Downloads/novel-swarm/novel-swarm/backend/app -type f -name *.py)"
+    ]
+  }
+}

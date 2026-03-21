@@ -1,0 +1,25 @@
+{
+  "name": "novel-swarm",
+  "version": "0.3.0",
+  "description": "MiroFish-style swarm intelligence engine for novel writing",
+  "scripts": {
+    "setup": "cd frontend && npm install",
+    "setup:backend:unix": "cd backend && (python3.11 -m venv .venv || python3 -m venv .venv) && .venv/bin/pip install -e .",
+    "setup:backend:win": "cd backend && (py -3.11 -m venv .venv || python -m venv .venv) && .venv\\Scripts\\pip install -e .",
+    "setup:all:unix": "npm run setup && npm run setup:backend:unix",
+    "setup:all:win": "npm run setup && npm run setup:backend:win",
+    "frontend": "cd frontend && npm run dev",
+    "backend:unix": "cd backend && .venv/bin/python run.py",
+    "backend:win": "cd backend && .venv\\Scripts\\python run.py",
+    "dev:unix": "npx concurrently \"npm run backend:unix\" \"npm run frontend\"",
+    "dev:win": "npx concurrently \"npm run backend:win\" \"npm run frontend\"",
+    "dev": "npx concurrently \"npm run backend:win\" \"npm run frontend\"",
+    "neo4j": "docker compose up -d neo4j"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
