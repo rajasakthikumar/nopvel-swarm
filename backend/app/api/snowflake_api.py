@@ -322,6 +322,71 @@ Output only the content itself, ready to paste into the field."""
         return jsonify({"error": str(e)}), 500
 
 
+@snowflake_bp.route("/node-suggest", methods=["POST"])
+def node_suggest():
+    """Generate an LLM suggestion for a single plot-graph node.
+
+    Receives the node label, its branch, the current content (if any),
+    and the full ancestor chain from root → parent so the suggestion
+    builds naturally on everything written above it.
+    """
+    data = request.json or {}
+    label = data.get("label", "Untitled plot point")
+    branch = data.get("branch", "main")
+    current_content = data.get("current_content", "").strip()
+    ancestor_chain = data.get("ancestor_chain", [])   # [{label, content}]
+    siblings = data.get("siblings", [])               # [{label, content}] same-branch neighbours
+
+    # Build ancestor context
+    ctx_lines = []
+    if ancestor_chain:
+        ctx_lines.append("STORY SO FAR (ancestor chain, root → parent):")
+        for i, anc in enumerate(ancestor_chain):
+            ctx_lines.append(f"  [{i+1}] {anc.get('label', '?')}")
+            if anc.get("content", "").strip():
+                ctx_lines.append(f"      {anc['content'][:300]}")
+        ctx_lines.append("")
+
+    if siblings:
+        ctx_lines.append("NEIGHBOURING NODES ON THIS BRANCH:")
+        for s in siblings[:4]:
+            ctx_lines.append(f"  • {s.get('label', '?')}: {s.get('content', '')[:150]}")
+        ctx_lines.append("")
+
+    context = "\n".join(ctx_lines)
+
+    edit_note = ""
+    if current_content:
+        edit_note = f"\nThe author has already written:\n{current_content}\n\nExpand or improve on this."
+
+    user_prompt = f"""{context}
+CURRENT NODE (branch: "{branch}"): "{label}"
+{edit_note}
+
+Write the plot-point content for this node. Be specific:
+- What happens here? (events, decisions, conflicts)
+- How does this node change the story?
+- What is the emotional beat the reader should feel?
+- What does the protagonist do, learn, or lose?
+
+Write 2-4 sentences of tight, specific narrative description — ready to use directly."""
+
+    try:
+        suggestion = llm_client.chat(
+            [{"role": "user", "content": user_prompt}],
+            system=(
+                "You are a master story architect and webnovel author. "
+                f"You are writing plot point content for the '{branch}' branch of a story. "
+                "Generate specific, vivid, immediately usable content that flows naturally "
+                "from everything that came before it."
+            ),
+            max_tokens=600,
+        )
+        return jsonify({"suggestion": suggestion})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @snowflake_bp.route("/steps", methods=["GET"])
 def get_steps():
     """Return the metadata for all 10 Snowflake steps (for frontend reference)."""
@@ -331,3 +396,127 @@ def get_steps():
             for meta in STEP_META
         ]
     )
+
+
+# ---------------------------------------------------------------------------
+# Recursive expansion — the core of the loop
+# ---------------------------------------------------------------------------
+
+LEVEL_NAMES = ["Novel", "Arc", "Beat", "Chapter", "Scene", "Moment"]
+
+# Which step triggers the expansion prompt at each level
+# Level 0-2: expand after step 4 (Expanded Summary)
+# Level 3+:  expand after step 9 (Scene Narratives) or step 8 (Scene List)
+EXPAND_TRIGGER_STEP = {0: 4, 1: 4, 2: 4, 3: 9, 4: 9, 5: 9}
+
+# Suggested number of children per level
+EXPAND_CHILD_COUNT = {0: 4, 1: 3, 2: 5, 3: 8, 4: 6, 5: 4}
+
+
+@snowflake_bp.route("/expand", methods=["POST"])
+def expand():
+    """Extract child-level seeds from the current node's completed step content.
+
+    The recursive loop:
+      Level 0 (Novel)   → Step 4 paragraphs  → Level 1 (Arcs)
+      Level 1 (Arc)     → Step 4 paragraphs  → Level 2 (Beats)
+      Level 2 (Beat)    → Step 4 paragraphs  → Level 3 (Chapters)
+      Level 3 (Chapter) → Step 9 scenes      → Level 4 (Scenes)
+      Level 4+ (Scene)  → Step 9 narratives  → Level 5 (Moments)
+
+    Returns a list of {title, hook} objects — each becomes the Step 1 content
+    for a new child node, pre-seeded and ready for the user to expand further.
+    """
+    data = request.json or {}
+    current_level = max(0, int(data.get("level", 0)))
+    node_label = data.get("node_label", "")
+    step_content = data.get("step_content", "")   # content of the trigger step
+    ancestors = data.get("ancestors", [])          # [{label, step1, step4}] parent chain
+    child_count_hint = data.get("child_count", None)
+
+    if not step_content.strip():
+        return jsonify({"error": "No content to expand from"}), 400
+
+    next_level = current_level + 1
+    next_level_name = LEVEL_NAMES[min(next_level, len(LEVEL_NAMES) - 1)]
+    child_level_name = next_level_name
+    child_count = child_count_hint or EXPAND_CHILD_COUNT.get(current_level, 4)
+    trigger_step = EXPAND_TRIGGER_STEP.get(current_level, 4)
+    trigger_step_name = STEP_META[trigger_step - 1]["title"]
+
+    # Build ancestor context
+    ancestor_ctx = ""
+    if ancestors:
+        ancestor_ctx = "STORY LINEAGE (parent levels, for context):\n"
+        for i, anc in enumerate(ancestors):
+            ancestor_ctx += f"  Level {i} ({LEVEL_NAMES[i]}) — {anc.get('label', '')}:\n"
+            if anc.get("step1"):
+                ancestor_ctx += f"    Hook: {anc['step1']}\n"
+            if anc.get("step4"):
+                ancestor_ctx += f"    Summary: {str(anc['step4'])[:300]}\n"
+        ancestor_ctx += "\n"
+
+    user_prompt = f"""{ancestor_ctx}
+CURRENT LEVEL {current_level} — {LEVEL_NAMES[current_level]}: "{node_label}"
+
+This is the content of Step {trigger_step} ({trigger_step_name}) for this node:
+---
+{step_content[:3000]}
+---
+
+TASK: Extract exactly {child_count} distinct {child_level_name}s from this content.
+Each {child_level_name} should be a self-contained story unit that can be expanded further.
+
+For each {child_level_name}, provide:
+- title: a short, evocative name (3-8 words)
+- hook: a single sentence capturing the core conflict/premise — vivid, specific, immediately usable as a Snowflake Step 1 input
+
+IMPORTANT:
+- The {child_level_name}s should cover the FULL scope of the content above — don't skip any major elements
+- Each hook must be specific to this story, not generic advice
+- Order them chronologically as they would appear in the story
+
+Return ONLY valid JSON:
+{{
+  "children": [
+    {{"title": "Short evocative title", "hook": "One-sentence hook for this {child_level_name}..."}},
+    ...
+  ]
+}}"""
+
+    try:
+        result = llm_client.chat_json(
+            [{"role": "user", "content": user_prompt}],
+            system=(
+                f"You are a master story architect. Extract {child_count} distinct "
+                f"{child_level_name}s from the provided story content. "
+                "Each must have a specific, compelling one-sentence hook that fully "
+                "captures its narrative essence — ready to use as a Snowflake Step 1 input."
+            ),
+            max_tokens=2000,
+        )
+
+        children = []
+        if isinstance(result, dict) and "children" in result:
+            children = result["children"]
+        elif isinstance(result, list):
+            children = result
+
+        # Normalise to {title, hook}
+        normalised = []
+        for c in children:
+            if isinstance(c, dict):
+                normalised.append({
+                    "title": c.get("title", f"{child_level_name} {len(normalised)+1}"),
+                    "hook": c.get("hook", c.get("one_sentence_hook", "")),
+                })
+
+        return jsonify({
+            "children": normalised,
+            "next_level": next_level,
+            "next_level_name": next_level_name,
+            "child_count": len(normalised),
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
