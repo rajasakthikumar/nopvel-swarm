@@ -366,6 +366,8 @@ Return JSON array of chapters.""",
                 max_tokens=6000,
             )
 
+            if isinstance(act_chapters, dict):
+                act_chapters = act_chapters.get("chapters", [])
             if isinstance(act_chapters, list):
                 self.chapters.extend(act_chapters)
 

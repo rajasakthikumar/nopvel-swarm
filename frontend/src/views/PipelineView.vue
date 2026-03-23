@@ -489,6 +489,7 @@ export default {
         phase_start: '▶', phase_complete: '✅',
         layer_start: '🔨', layer_complete: '✅', layer_error: '❌',
         draft_stage: '📝',
+        snowflake_stage: '❄️', snowflake_options: '❄️',
         agents_spawned: '🎭', agent_start: '💭', agent_post: '💬', agent_error: '❌',
         injection: '⚡', living_memory_formed: '🧠', character_promoted: '👑',
         graph_updated: '🕸', round_start: '🔄', round_end: '✓', round_spotlight: '🔦',
@@ -505,6 +506,8 @@ export default {
         case 'phase_start':     return `Starting: ${d.description || d.phase}`
         case 'phase_complete':  return `✅ Completed: ${d.phase}${d.chapters ? ` — ${d.chapters} chapters` : ''}${d.posts ? ` — ${d.posts} posts` : ''}${d.length ? ` — ${d.length} chars` : ''}`
         case 'layer_start':     return `Building ${d.layer}…`
+        case 'snowflake_stage': return `❄️ Snowflake Step ${d.step}: ${d.stage}`
+        case 'snowflake_options': return `❄️ Generated ${d.count} story concepts: ${(d.options || []).map(o => o.title || `Option ${o.option_number}`).join(', ')}`
         case 'pipeline_paused': return `⏸️ Pipeline Paused`
         case 'pipeline_resumed':return `▶️ Pipeline Resumed`
         case 'system_notification': return `System: ${d}`

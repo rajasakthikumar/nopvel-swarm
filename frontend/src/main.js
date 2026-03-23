@@ -6,6 +6,7 @@ import PipelineView from './views/PipelineView.vue'
 import SimulationView from './views/SimulationView.vue'
 import MirofishDashboard from './views/MirofishDashboard.vue'
 import AgentDashboard from './views/AgentDashboard.vue'
+import SnowflakeView from './views/Snowflake.vue'
 
 const routes = [
   { path: '/', component: MirofishDashboard },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/pipeline', component: PipelineView },
   { path: '/simulation', component: SimulationView },
   { path: '/agents', component: AgentDashboard },
+  { path: '/snowflake', component: SnowflakeView },
 ]
 
 const router = createRouter({

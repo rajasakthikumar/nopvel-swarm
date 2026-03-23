@@ -168,9 +168,9 @@ class StoryPipeline:
         self.is_paused = False
         self.emit("pipeline_resumed", {"status": "resumed"})
         if self.active_engine is not None and getattr(
-            self.active_engine, "pause", None
+            self.active_engine, "resume", None
         ):
-            self.active_engine.pause()
+            self.active_engine.resume()
 
     def _check_pause(self):
         while self.is_paused:
@@ -246,14 +246,27 @@ Return ONLY valid JSON:
             # Step 3: Expand the best option into full concept
             self.emit("snowflake_stage", {"stage": "Expanding best concept", "step": 2})
 
-            best_option_prompt = f"""Expand the BEST story concept into a 600-900 word detailed document.
+            # Build summary of all 5 options so LLM can evaluate and pick the best
+            options_summary = "\n\n".join(
+                f"OPTION {o.get('option_number', i+1)}: {o.get('title', 'Untitled')}\n"
+                f"Hook: {o.get('one_sentence_hook', '')}\n"
+                f"Concept: {o.get('expanded_concept', '')[:300]}\n"
+                f"Why strong: {o.get('why_strong', '')}\n"
+                f"Tone: {o.get('tone', '')} | Mood: {o.get('mood', '')}"
+                for i, o in enumerate(options)
+            )
+
+            best_option_prompt = f"""Review these {len(options)} story concepts and expand the BEST one into a 600-900 word detailed document.
+
+ALL OPTIONS:
+{options_summary}
 
 {f"REQUIRED ENDING: {self.actual_ending}" if self.actual_ending else ""}
 {f"PACING: {self.pacing}" if self.pacing else ""}
 {f"MOOD: {self.mood}" if self.mood else ""}
 {f"GENRES: {self.genres}" if self.genres else ""}
 
-For this expanded concept, provide:
+Choose the option with the strongest narrative potential (best protagonist wound, most compelling conflict, richest thematic core). Then expand it into a detailed document including:
 - Protagonist: wound, want vs need, flaw, arc
 - World hook: unique setting element
 - Central conflict: what drives the plot
@@ -267,12 +280,9 @@ For this expanded concept, provide:
 
 Make it compelling and specific."""
 
-            # Use first option as base, or let LLM choose best
-            base_concept = options[0].get("expanded_concept", "") if options else ""
-
             self.expanded_seed = llm_client.chat(
                 [{"role": "user", "content": best_option_prompt}],
-                system=f"You are a master story developer. Expand this concept into a detailed document. Base concept: {base_concept[:500]}",
+                system="You are a master story developer. Select the best concept from the options provided and expand it into a detailed document.",
                 max_tokens=2000,
             )
 
